@@ -1,7 +1,8 @@
 # Personal Design System
 by Jeremy Platt
 
-## HSL Responsive Color Palette
+## Color
+### HSL Responsive Color Palette
 color-palette.css
 
 By defining colors through hue, saturation and lightness level, we can easily define colors in relation to each other. In addition to this benefit, we can specify the lightness level in order to create better contrast for color blindness.
