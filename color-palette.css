@@ -1,0 +1,115 @@
+:root {
+  
+/*  Color Palette Hues  */
+  --primary-hue: 323;
+  --secondary-hue: calc( var(--primary-hue) + 60 );
+  --primary-comp-hue: calc( var(--primary-hue) + 210 );
+  --secondary-comp-hue: calc( var(--primary-hue) + 270 );
+ 
+/*  Color Palette Hue Saturation Light  */
+  --color-primary: hsl(var(--primary-hue), 60%, 70%);
+  --color-secondary: hsl(var(--secondary-hue), 60%, 70%);
+  --color-primary-comp: hsl(var(--primary-comp-hue), 60%, 70%);
+  --color-secondary-comp: hsl(var(--secondary-comp-hue), 60%, 70%);
+
+  --color-primary-light: hsl(var(--primary-hue), 60%, 97%);
+  --color-secondary-light: hsl(var(--secondary-hue), 60%, 97%);
+  --color-primary-comp-light: hsl(var(--primary-comp-hue), 60%, 97%);
+  --color-secondary-comp-light: hsl(var(--secondary-comp-hue), 60%, 97%);
+  
+  --color-primary-dark: hsl(var(--primary-hue), 60%, 25%);
+  --color-secondary-dark: hsl(var(--secondary-hue), 60%, 25%);
+  --color-primary-comp-dark: hsl(var(--primary-comp-hue), 60%, 25%);
+  --color-secondary-comp-dark: hsl(var(--secondary-comp-hue), 60%, 25%); 
+  
+  --color-primary-sat: hsl(var(--primary-hue), 60%, 55%);
+  --color-secondary-sat: hsl(var(--secondary-hue), 60%, 55%);
+  --color-primary-comp-sat: hsl(var(--primary-comp-hue), 60%, 55%);
+  --color-secondary-comp-sat: hsl(var(--secondary-comp-hue), 60%, 55%);   
+  
+/*  Color Palette Gradients   */
+  --primary-gradient: linear-gradient(0.25turn, var(--color-secondary-sat), var(--color-primary-sat), var(--color-secondary-comp-sat));
+  --secondary-gradient: linear-gradient(0.25turn, var(--color-secondary-sat), var(--color-primary-sat));  
+  --third-gradient: linear-gradient(0.25turn, var(--color-secondary-comp-sat), var(--color-primary-comp-sat)); 
+  --fourth-gradient: linear-gradient(0.25turn, var(--color-secondary-comp-sat), var(--color-primary-sat)); 
+
+/*  Color Palette Text  */
+  --text-dark: hsl(var(--primary-hue), 70%, 5%);  
+  --text-light: hsl(var(--primary-hue), 70%, 97%); 
+
+/* Default Text Color */
+  --text-color: var(--text-dark);   
+
+/*  Range Color  */
+   --range-backcolor: var(--color-primary-light); 
+   --range-textcolor: var(--text-dark);
+}
+
+
+.primary-color-range{
+  --range-backcolor: var(--color-primary);
+  --range-textcolor: var(--text-dark);
+}
+.secondary-color-range{
+  --range-backcolor: var(--color-secondary);
+  --range-textcolor: var(--text-dark);
+}
+.primary-comp-color-range{
+  --range-backcolor: var(--color-primary-comp);
+  --range-textcolor: var(--text-dark);
+}
+.secondary-comp-color-range{
+  --range-backcolor: var(--color-secondary-comp);
+  --range-textcolor: var(--text-dark);
+}
+
+.primary-color-range.color-light {
+  --range-backcolor: var(--color-primary-light);
+  --range-textcolor: var(--text-dark);
+}
+.secondary-color-range.color-light {
+   --range-backcolor: var(--color-secondary-light);
+   --range-textcolor: var(--text-dark);
+}
+.primary-comp-color-range.color-light{
+  --range-backcolor: var(--color-primary-comp-light);
+  --range-textcolor: var(--text-dark);
+}
+.secondary-comp-color-range.color-light{
+  --range-backcolor: var(--color-secondary-comp-light);
+  --range-textcolor: var(--text-dark);
+}
+
+.primary-color-range.color-sat {
+  --range-backcolor: var(--color-primary-sat);
+  --range-textcolor: var(--text-dark);
+}
+.secondary-color-range.color-sat{
+  --range-backcolor: var(--color-secondary-sat);
+  --range-textcolor: var(--text-dark);
+}
+.primary-comp-color-range.color-sat{
+  --range-backcolor: var(--color-primary-comp-sat);
+  --range-textcolor: var(--text-dark);
+}
+.secondary-comp-color-range.color-sat{
+  --range-backcolor: var(--color-secondary-comp-sat);
+  --range-textcolor: var(--text-light);
+}
+
+.primary-color-range.color-dark {
+  --range-backcolor: var(--color-primary-dark);
+  --range-textcolor: var(--text-light);
+}
+.secondary-color-range.color-dark{
+  --range-backcolor: var(--color-secondary-dark);
+  --range-textcolor: var(--text-light);
+}
+.primary-comp-color-range.color-dark{
+  --range-backcolor: var(--color-primary-comp-dark);
+  --range-textcolor: var(--text-light);
+}
+.secondary-comp-color-range.color-dark{
+  --range-backcolor: var(--color-secondary-comp-dark);
+  --range-textcolor: var(--text-light);
+}
