@@ -6,7 +6,7 @@
   --primary-comp-hue: calc( var(--primary-hue) + 210 );
   --secondary-comp-hue: calc( var(--primary-hue) + 270 );
  
-/*  Color Palette Hue Saturation Light  */
+/*  Color Palette HSL (Hue Saturation Lightness)  */
   --color-primary: hsl(var(--primary-hue), 60%, 70%);
   --color-secondary: hsl(var(--secondary-hue), 60%, 70%);
   --color-primary-comp: hsl(var(--primary-comp-hue), 60%, 70%);
@@ -33,11 +33,25 @@
   --gradient-third: linear-gradient(0.25turn, var(--color-secondary-comp-sat), var(--color-primary-comp-sat)); 
   --gradient-fourth: linear-gradient(0.25turn, var(--color-secondary-comp-sat), var(--color-primary-sat)); 
 
-/*  Default Color Palette  */
+/*  Default Layout Color Palette  */
    --ground: var(--color-primary-light); /*  60% of layout color */
    --complementary: var(--color-primary-dark); /*  30% of layout color */
    --accent: var(--color-primary-sat); /*  10% of layout color */
    --glaze: var(--gradient-primary); /*  blends media color  */
+
+/*  Default Denotive Color Palette  */
+   --error: var(--color-primary-sat);
+   --warning: var(--color-secondary-sat);
+   --success: var(--color-primary-comp-sat);
+   --disabled: var(--color-primary);
+   --info: var(--color-primary-dark);
+   --action: var(--color-secondary-comp-sat);
+   --option: var(--color-secondary); 
+  
+/*  Default Interactive Color Palette  */
+   --interact-hue: var(--primary-comp-hue);
+   --interact-sat: 60%;
+   --interact-lightness: 70%;
 }
 
 /* Color Palettes */
