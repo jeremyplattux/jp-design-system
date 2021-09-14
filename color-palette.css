@@ -28,88 +28,83 @@
   --color-secondary-comp-sat: hsl(var(--secondary-comp-hue), 60%, 55%);   
   
 /*  Color Palette Gradients   */
-  --primary-gradient: linear-gradient(0.25turn, var(--color-secondary-sat), var(--color-primary-sat), var(--color-secondary-comp-sat));
-  --secondary-gradient: linear-gradient(0.25turn, var(--color-secondary-sat), var(--color-primary-sat));  
-  --third-gradient: linear-gradient(0.25turn, var(--color-secondary-comp-sat), var(--color-primary-comp-sat)); 
-  --fourth-gradient: linear-gradient(0.25turn, var(--color-secondary-comp-sat), var(--color-primary-sat)); 
+  --gradient-primary: linear-gradient(0.25turn, var(--color-secondary-sat), var(--color-primary-sat), var(--color-secondary-comp-sat));
+  --gradient-secondary: linear-gradient(0.25turn, var(--color-secondary-sat), var(--color-primary-sat));  
+  --gradient-third: linear-gradient(0.25turn, var(--color-secondary-comp-sat), var(--color-primary-comp-sat)); 
+  --gradient-fourth: linear-gradient(0.25turn, var(--color-secondary-comp-sat), var(--color-primary-sat)); 
 
-/*  Color Palette Text  */
-  --text-dark: hsl(var(--primary-hue), 70%, 5%);  
-  --text-light: hsl(var(--primary-hue), 70%, 97%); 
-
-/* Default Text Color */
-  --text-color: var(--text-dark);   
-
-/*  Range Color  */
-   --range-backcolor: var(--color-primary-light); 
-   --range-textcolor: var(--text-dark);
+/*  Default Color Palette  */
+   --ground: var(--color-primary-light); /*  60% of layout color */
+   --complementary: var(--color-primary-dark); /*  30% of layout color */
+   --accent: var(--color-primary-sat); /*  10% of layout color */
+   --glaze: var(--gradient-primary); /*  blends media color  */
 }
 
 
-.primary-color-range{
-  --range-backcolor: var(--color-primary);
-  --range-textcolor: var(--text-dark);
+.primary-palette{
+  --ground: var(--color-primary);
+  --complementary: var(--color-primary-dark);
 }
-.secondary-color-range{
-  --range-backcolor: var(--color-secondary);
-  --range-textcolor: var(--text-dark);
+.secondary-palette{
+  --ground: var(--color-secondary);
+  --complementary: var(--color-primary-dark);
 }
-.primary-comp-color-range{
-  --range-backcolor: var(--color-primary-comp);
-  --range-textcolor: var(--text-dark);
+.primary-comp-palette{
+  --ground: var(--color-primary-comp);
+  --complementary: var(--color-primary-dark);
 }
-.secondary-comp-color-range{
-  --range-backcolor: var(--color-secondary-comp);
-  --range-textcolor: var(--text-dark);
-}
-
-.primary-color-range.color-light {
-  --range-backcolor: var(--color-primary-light);
-  --range-textcolor: var(--text-dark);
-}
-.secondary-color-range.color-light {
-   --range-backcolor: var(--color-secondary-light);
-   --range-textcolor: var(--text-dark);
-}
-.primary-comp-color-range.color-light{
-  --range-backcolor: var(--color-primary-comp-light);
-  --range-textcolor: var(--text-dark);
-}
-.secondary-comp-color-range.color-light{
-  --range-backcolor: var(--color-secondary-comp-light);
-  --range-textcolor: var(--text-dark);
+.secondary-comp-palette{
+  --ground: var(--color-secondary-comp);
+  --complementary: var(--color-primary-dark);
 }
 
-.primary-color-range.color-sat {
-  --range-backcolor: var(--color-primary-sat);
-  --range-textcolor: var(--text-dark);
+.primary-palette.tint-light {
+  --ground: var(--color-primary-light);
+  --complementary: var(--color-primary-dark);
 }
-.secondary-color-range.color-sat{
-  --range-backcolor: var(--color-secondary-sat);
-  --range-textcolor: var(--text-dark);
+.secondary-palette.tint-light {
+   --ground: var(--color-secondary-light);
+   --complementary: var(--color-primary-dark);
 }
-.primary-comp-color-range.color-sat{
-  --range-backcolor: var(--color-primary-comp-sat);
-  --range-textcolor: var(--text-dark);
+.primary-comp-palette.tint-light{
+  --ground: var(--color-primary-comp-light);
+  --complementary: var(--color-primary-dark);
 }
-.secondary-comp-color-range.color-sat{
-  --range-backcolor: var(--color-secondary-comp-sat);
-  --range-textcolor: var(--text-light);
+.secondary-comp-palette.tint-light{
+  --ground: var(--color-secondary-comp-light);
+  --complementary: var(--color-primary-dark);
 }
 
-.primary-color-range.color-dark {
-  --range-backcolor: var(--color-primary-dark);
-  --range-textcolor: var(--text-light);
+.primary-palette.tint-sat {
+  --ground: var(--color-primary-sat);
+  --complementary: var(--color-primary-dark);
 }
-.secondary-color-range.color-dark{
-  --range-backcolor: var(--color-secondary-dark);
-  --range-textcolor: var(--text-light);
+.secondary-palette.tint-sat{
+  --ground: var(--color-secondary-sat);
+  --complementary: var(--color-primary-dark);
 }
-.primary-comp-color-range.color-dark{
-  --range-backcolor: var(--color-primary-comp-dark);
-  --range-textcolor: var(--text-light);
+.primary-comp-palette.tint-sat{
+  --ground: var(--color-primary-comp-sat);
+  --complementary: var(--color-primary-dark);
 }
-.secondary-comp-color-range.color-dark{
-  --range-backcolor: var(--color-secondary-comp-dark);
-  --range-textcolor: var(--text-light);
+.secondary-comp-palette.tint-sat{
+  --ground: var(--color-secondary-comp-sat);
+  --complementary: var(--color-primary-light);
+}
+
+.primary-palette.tint-dark {
+  --ground: var(--color-primary-dark);
+  --complementary: var(--color-primary-light);
+}
+.secondary-palette.tint-dark{
+  --ground: var(--color-secondary-dark);
+  --complementary: var(--color-primary-light);
+}
+.primary-comp-palette.tint-dark{
+  --ground: var(--color-primary-comp-dark);
+  --complementary: var(--color-primary-light);
+}
+.secondary-comp-palette.tint-dark{
+  --ground: var(--color-secondary-comp-dark);
+  --complementary: var(--color-primary-light);
 }
