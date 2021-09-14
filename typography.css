@@ -1,0 +1,149 @@
+/* Imports  */	
+
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css') screen;
+@import url('https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&family=Raleway:wght@100..900&display=swap');
+
+:root {
+	/* Typography Default Mobile / Tall Screen Varibles */
+	--default: inherit; /* inherits whatever its 'parent' characteristics are */
+	
+	/* default text characteristics */
+	--text-font: 'Atkinson Hyperlegible', 'Raleway', Helvetica, Arial, sans-serif;
+	--text-size: calc(14px + 2vw); /* default text size is equal to 2% of the width of display window + 14px (sets minimum text size for accessibility and still maintains a responsive text size) */
+	--text-weight: 400;
+	--text-spacing: 0.035em; /* spacing between characters is 35% of CURRENT text size (ideal for dyslexia) */
+	--text-lineheight: 1.5em; /* vertical spacing for text height is 1.5x CURRENT(em) text size (ideal for dyslexia)*/ 
+	
+	/* default Header text characteristics */
+		--header-font: 'Raleway', Helvetica, Arial, sans-serif;
+		--header-size: 1.2rem; /* default header = default text size x 1.2 or %20 bigger for readibility */
+		--header-weight: 900;
+		--header-lineheight: 1.2em;
+    --header-spacing: 0.02em;
+	
+		--h1-font: var(--header-font);
+		--h1-size: 2rem;
+		--h1-weight: 400;
+		--h1-lineheight: var(--header-lineheight);
+    --h1-spacing: var(--header-spacing);
+	
+		--h2-font: var(--header-font);
+		--h2-size: 1.67rem;
+		--h2-weight: var(--header-weight);
+		--h2-lineheight: var(--header-lineheight);
+    --h2-spacing: 0.05em;
+	
+		--h3-font: var(--header-font);
+		--h3-size: 1.5rem;
+		--h3-weight: 400;
+		--h3-lineheight: var(--header-lineheight);
+    --h3-spacing: var(--header-spacing);
+	
+		--h4-font: var(--header-font);
+		--h4-size: 1.3rem;
+		--h4-weight: var(--header-weight);
+		--h4-lineheight: var(--header-lineheight);
+    --h4-spacing: 0.05em;
+	
+		--h5-font: var(--header-font);
+		--h5-size: 1.3rem;
+		--h5-weight: 400;
+		--h5-lineheight: var(--header-lineheight);
+    --h5-spacing: var(--header-spacing);
+	
+		--h6-font: var(--header-font);
+		--h6-size: var(--header-size);
+		--h6-weight: var(--header-weight);
+		--h6-lineheight: var(--header-lineheight);
+    --h6-spacing: 0.05em;
+	
+	/* default layout text characteristics */
+		--logo-font: var(--header-font);
+		--logo-size: 2rem;
+		--logo-weight: 900;
+		--logo-lineheight: var(--default);
+    --logo-spacing: 0.05em;
+
+		--title-font: var(--h1-font);
+		--title-size: var(--h1-size);
+    --title-weight: var(--h1-weight);
+		--title-lineheight: var(--h1-lineheight);
+    --title-spacing: var(--h1-spacing);
+
+		--hero-font: var(--header-font);
+		--hero-size: 2.5rem;
+    --hero-weight: var(--h2-weight);
+		--hero-lineheight: var(--header-lineheight);
+    --hero-spacing: 0.05em;
+	
+		--footer-font: var(--text-font);
+		--footer-size: calc(14px + 0.1vw);
+		--footer-lineheight: var(--text-lineheight);
+
+		--social-font: var(--default);
+		--social-size: var(--default);
+    --social-weight: var(--default);
+		--social-lineheight: var(--default);
+	
+	/* default characteristics */
+	
+		--link-font: var(--header-font);
+		--link-size: var(--default);
+		--link-weight: 900;
+	
+		--linkhover-font: var(--link-font);
+		--linkhover-size: var(--link-size);
+		--linkhover-weight: var(--link-weight);	
+	
+		--linkactive-font: var(--link-font);
+		--linkactive-size: var(--link-size);
+		--linkactive-weight: var(--link-weight);	
+	
+		--italic-font: var(--header-font); 
+    --italic-style: normal; /* avoid underline & slant to keep readibility */
+		--italic-size: var(--default);
+		--italic-weight: calc(var(--text-weight) - 100);
+	
+		--underline-font: var(--default); 
+    --underline-style: normal; /* avoid underline & slant to keep readibility */
+		--underline-size: var(--default);
+		--underline-weight: var(--default);
+	
+		--bold-font: var(--default);
+		--bold-size: var(--default);
+		--bold-weight: 900;
+    --bold-spacing: 0.06em;
+	
+		--big-font: var(--default); /* avoid all uppercase to keep readibility */
+		--big-size: 1.25em;
+		--big-weight: var(--default);
+	
+		--small-font: var(--default); /* avoid all small capitalization to keep readibility */
+		--small-size: 0.75em;
+		--small-weight: var(--default);
+	
+		--quote-font: var(--default);
+		--quote-size: var(--big-size);
+		--quote-weight: var(--default);
+
+		--code-font: var(--default);
+		--code-size: var(--small-size);
+		--code-weight: var(--default);
+
+		--list-font: var(--default);
+		--list-size: var(--default);
+		--list-weight: var(--default);
+	
+		--input-font: var(--default);
+		--input-size: var(--default);
+		--input-weight: 900;
+		--input-lineheight: var(--default);
+    --input-spacing: 0.05em;
+}
+
+/* Typography Default DESKTOP / Wide Display Varible Changes */
+@media screen and (min-width: 37.5rem) {
+  
+	/* Default Text Characteristics */
+	--text-size: calc(14px + 0.5vw); /* default DESKTOP text size is equal to 0.5% of the width of display window + 14px */
+}
