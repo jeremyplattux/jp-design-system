@@ -19,62 +19,62 @@
 		--header-size: 1.2rem; /* default header = default text size x 1.2 or %20 bigger for readibility */
 		--header-weight: 900;
 		--header-lineheight: 1.2em;
-    --header-spacing: 0.02em;
+		--header-spacing: 0.02em;
 	
 		--h1-font: var(--header-font);
 		--h1-size: 2rem;
 		--h1-weight: 400;
 		--h1-lineheight: var(--header-lineheight);
-    --h1-spacing: var(--header-spacing);
+   		--h1-spacing: var(--header-spacing);
 	
 		--h2-font: var(--header-font);
 		--h2-size: 1.67rem;
 		--h2-weight: var(--header-weight);
 		--h2-lineheight: var(--header-lineheight);
-    --h2-spacing: 0.05em;
+    		--h2-spacing: 0.05em;
 	
 		--h3-font: var(--header-font);
 		--h3-size: 1.5rem;
 		--h3-weight: 400;
 		--h3-lineheight: var(--header-lineheight);
-    --h3-spacing: var(--header-spacing);
+    		--h3-spacing: var(--header-spacing);
 	
 		--h4-font: var(--header-font);
 		--h4-size: 1.3rem;
 		--h4-weight: var(--header-weight);
 		--h4-lineheight: var(--header-lineheight);
-    --h4-spacing: 0.05em;
+    		--h4-spacing: 0.05em;
 	
 		--h5-font: var(--header-font);
 		--h5-size: 1.3rem;
 		--h5-weight: 400;
 		--h5-lineheight: var(--header-lineheight);
-    --h5-spacing: var(--header-spacing);
+    		--h5-spacing: var(--header-spacing);
 	
 		--h6-font: var(--header-font);
 		--h6-size: var(--header-size);
 		--h6-weight: var(--header-weight);
 		--h6-lineheight: var(--header-lineheight);
-    --h6-spacing: 0.05em;
+    		--h6-spacing: 0.05em;
 	
 	/* default layout text characteristics */
 		--logo-font: var(--header-font);
 		--logo-size: 2rem;
 		--logo-weight: 900;
 		--logo-lineheight: var(--default);
-    --logo-spacing: 0.05em;
+    		--logo-spacing: 0.05em;
 
 		--title-font: var(--h1-font);
 		--title-size: var(--h1-size);
-    --title-weight: var(--h1-weight);
+    		--title-weight: var(--h1-weight);
 		--title-lineheight: var(--h1-lineheight);
-    --title-spacing: var(--h1-spacing);
+    		--title-spacing: var(--h1-spacing);
 
 		--hero-font: var(--header-font);
 		--hero-size: 2.5rem;
-    --hero-weight: var(--h2-weight);
+    		--hero-weight: var(--h2-weight);
 		--hero-lineheight: var(--header-lineheight);
-    --hero-spacing: 0.05em;
+    		--hero-spacing: 0.05em;
 	
 		--footer-font: var(--text-font);
 		--footer-size: calc(14px + 0.1vw);
@@ -82,7 +82,7 @@
 
 		--social-font: var(--default);
 		--social-size: var(--default);
-    --social-weight: var(--default);
+    		--social-weight: var(--default);
 		--social-lineheight: var(--default);
 	
 	/* default characteristics */
@@ -100,19 +100,19 @@
 		--linkactive-weight: var(--link-weight);	
 	
 		--italic-font: var(--header-font); 
-    --italic-style: normal; /* avoid underline & slant to keep readibility */
+    		--italic-style: normal; /* avoid underline & slant to keep readibility */
 		--italic-size: var(--default);
 		--italic-weight: calc(var(--text-weight) - 100);
 	
 		--underline-font: var(--default); 
-    --underline-style: normal; /* avoid underline & slant to keep readibility */
+    		--underline-style: normal; /* avoid underline & slant to keep readibility */
 		--underline-size: var(--default);
 		--underline-weight: var(--default);
 	
 		--bold-font: var(--default);
 		--bold-size: var(--default);
 		--bold-weight: 900;
-    --bold-spacing: 0.06em;
+   		--bold-spacing: 0.06em;
 	
 		--big-font: var(--default); /* avoid all uppercase to keep readibility */
 		--big-size: 1.25em;
@@ -138,7 +138,7 @@
 		--input-size: var(--default);
 		--input-weight: 900;
 		--input-lineheight: var(--default);
-    --input-spacing: 0.05em;
+    		--input-spacing: 0.05em;
 }
 
 /* Typography Default DESKTOP / Wide Display Varible Changes */
