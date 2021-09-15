@@ -1,5 +1,6 @@
-@import url("https://github.com/jeremyplattux/jp-design-system/color-palette.css") screen;
-@import url("https://github.com/jeremyplattux/jp-design-system/typography.css") screen;
+/* Import Variables */
+  @import url("https://github.com/jeremyplattux/jp-design-system/color-palette.css") screen;
+  @import url("https://github.com/jeremyplattux/jp-design-system/typography.css") screen;
 
 /* Enable Light & Dark Modes */
   :root {
