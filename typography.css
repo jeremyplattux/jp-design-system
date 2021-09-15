@@ -37,7 +37,7 @@
 		--h3-size: 1.5rem;
 		--h3-weight: 400;
 		--h3-lineheight: var(--header-lineheight);
-    		--h3-spacing: var(--header-spacing);
+   		 --h3-spacing: var(--header-spacing);
 	
 		--h4-font: var(--header-font);
 		--h4-size: 1.3rem;
@@ -66,7 +66,7 @@
 
 		--title-font: var(--h1-font);
 		--title-size: var(--h1-size);
-    		--title-weight: var(--h1-weight);
+   		--title-weight: var(--h1-weight);
 		--title-lineheight: var(--h1-lineheight);
     		--title-spacing: var(--h1-spacing);
 
@@ -142,8 +142,9 @@
 }
 
 /* Typography Default DESKTOP / Wide Display Varible Changes */
-@media screen and (min-width: 37.5rem) {
-  
+  @media screen and (min-width: 37.5rem) {
 	/* Default Text Characteristics */
-	--text-size: calc(14px + 0.5vw); /* default DESKTOP text size is equal to 0.5% of the width of display window + 14px */
-}
+    		:root{ 
+	    		--text-size: calc(14px + 0.5vw); /* default DESKTOP text size is equal to 0.5% of the width of display window + 14px */  }
+    		}
+
