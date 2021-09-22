@@ -82,7 +82,8 @@
 
         <section id="experience">
 
-          <section itemscope itemtype="http://schema.org/Organization">
+          <section itemprop="alumniOf" itemscope itemtype="https://schema.org/OrganizationRole">
+           <div itemprop="alumniOf" itemscope itemtype="https://schema.org/Organization">
             <h2 itemprop="jobTitle">UX Designer</h2>
             <p itemprop="name">Company Name 1</p>
             <p>February 2019 &#45; Present</p>
@@ -107,14 +108,16 @@
 
         <section id="education">
 
-          <section itemscope itemtype="http://schema.org/EducationalOrganization">
+          <section itemprop="alumniOf" itemscope itemtype="https://schema.org/OrganizationRole">
+           <div itemprop="alumniOf" itemscope itemtype="https://schema.org/CollegeOrUniversity">                                                                                    
             <p itemprop="name">University</p>
-            <p itemprop="name">UX Design</p>
+            <p itemprop="name" itemscope itemtype="https://schema.org/EducationalOccupationalCredential">UX Design</p>
             <p>2003 &#45; 2005</p>
 
             <p>
             <a itemprop="url" href="http://www.link.edu/" target="_blank" title="University">www.link.edu</a>
             </p>
+           </div>                                                                                 
           </section>                                                                                
 
         </section>
