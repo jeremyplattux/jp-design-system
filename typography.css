@@ -1,5 +1,6 @@
 /* Imports  */	
 
+/* @import url("https://codepen.io/jeremyplatt/pen/wvePyqB.css") screen; -- replace with color palette css */
 @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css') screen;
 @import url('https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&family=Raleway:wght@100..900&display=swap');
 
@@ -16,38 +17,38 @@
 	
 	/* default Header text characteristics */
 		--header-font: 'Raleway', Helvetica, Arial, sans-serif;
-		--header-size: 1.2rem; /* default header = default text size x 1.2 or %20 bigger for readibility */
-		--header-weight: 900;
+		--header-size: 1.2em; /* default header = default text size x 1.2 or %20 bigger for readibility */
+		--header-weight: 700;
 		--header-lineheight: 1.2em;
-		--header-spacing: 0.02em;
+		--header-spacing: 0.04em;
 	
 		--h1-font: var(--header-font);
-		--h1-size: 2rem;
-		--h1-weight: 400;
+		--h1-size: 2em;
+		--h1-weight: 300;
 		--h1-lineheight: var(--header-lineheight);
    		--h1-spacing: var(--header-spacing);
 	
 		--h2-font: var(--header-font);
-		--h2-size: 1.67rem;
+		--h2-size: 1.67em;
 		--h2-weight: var(--header-weight);
 		--h2-lineheight: var(--header-lineheight);
     		--h2-spacing: 0.05em;
 	
 		--h3-font: var(--header-font);
-		--h3-size: 1.5rem;
-		--h3-weight: 400;
+		--h3-size: 1.5em;
+		--h3-weight: 300;
 		--h3-lineheight: var(--header-lineheight);
-   		 --h3-spacing: var(--header-spacing);
+    		--h3-spacing: var(--header-spacing);
 	
 		--h4-font: var(--header-font);
-		--h4-size: 1.3rem;
+		--h4-size: 1.3em;
 		--h4-weight: var(--header-weight);
 		--h4-lineheight: var(--header-lineheight);
     		--h4-spacing: 0.05em;
 	
 		--h5-font: var(--header-font);
-		--h5-size: 1.3rem;
-		--h5-weight: 400;
+		--h5-size: 1.3em;
+		--h5-weight: 300;
 		--h5-lineheight: var(--header-lineheight);
     		--h5-spacing: var(--header-spacing);
 	
@@ -59,22 +60,22 @@
 	
 	/* default layout text characteristics */
 		--logo-font: var(--header-font);
-		--logo-size: 2rem;
+		--logo-size: 2em;
 		--logo-weight: 900;
 		--logo-lineheight: var(--default);
     		--logo-spacing: 0.05em;
 
-		--title-font: var(--h1-font);
+		--title-font: var(--h2-font);
 		--title-size: var(--h1-size);
-   		--title-weight: var(--h1-weight);
-		--title-lineheight: var(--h1-lineheight);
-    		--title-spacing: var(--h1-spacing);
+    		--title-weight: var(--h2-weight);
+		--title-lineheight: var(--h2-lineheight);
+    		--title-spacing: var(--h2-spacing);
 
 		--hero-font: var(--header-font);
-		--hero-size: 2.5rem;
-    		--hero-weight: var(--h2-weight);
+		--hero-size: var(--h2-size);
+    		--hero-weight: 900;
 		--hero-lineheight: var(--header-lineheight);
-    		--hero-spacing: 0.05em;
+   		--hero-spacing: 0.05em;
 	
 		--footer-font: var(--text-font);
 		--footer-size: calc(14px + 0.1vw);
@@ -103,6 +104,7 @@
     		--italic-style: normal; /* avoid underline & slant to keep readibility */
 		--italic-size: var(--default);
 		--italic-weight: calc(var(--text-weight) - 100);
+    		--italic-spacing: 0.05em;
 	
 		--underline-font: var(--default); 
     		--underline-style: normal; /* avoid underline & slant to keep readibility */
@@ -144,7 +146,163 @@
 /* Typography Default DESKTOP / Wide Display Varible Changes */
   @media screen and (min-width: 37.5rem) {
 	/* Default Text Characteristics */
-    		:root{ 
-	    		--text-size: calc(14px + 0.5vw); /* default DESKTOP text size is equal to 0.5% of the width of display window + 14px */  }
-    		}
+    :root{ 
+	    --text-size: calc(14px + 1vw); /* default DESKTOP text size is equal to 0.5% of the width of display window + 14px */  }
+  }
+
+/* Default Typography */
+  abbr[title] {
+    border-bottom: none;
+    text-decoration: underline; 
+    text-decoration: underline dotted; 
+  }
+  b, strong {
+    font-family: var(--bold-font);
+    font-size: var(--bold-size);
+    font-weight: var(--bold-weight);
+    line-height: var(--bold-lineheight);
+    letter-spacing: var(--bold-spacing);
+  }
+  i, em {
+    font-style: normal;
+    font-family: var(--italic-font);
+    font-size: var(--italic-size);
+    font-weight: var(--italic-weight);
+    line-height: var(--italic-lineheight);
+    letter-spacing: var(--italic-spacing);
+  }
+  small {
+    font-family: var(--small-font);
+    font-size: var(--small-size);
+    font-weight: var(--small-weight);
+    line-height: var(--small-lineheight);
+    letter-spacing: var(--small-spacing);
+  }
+  sub, sup {
+    font-family: var(--small-font);
+    font-size: var(--small-size);
+    font-weight: var(--small-weight);
+    letter-spacing: var(--small-spacing);
+    line-height: 0;
+    position: relative;
+    vertical-align: baseline;
+  }
+
+  sub {
+    bottom: -0.25em;
+  }
+
+  sup {
+    top: -0.5em;
+  }
+
+/* Default Links */
+  a {
+      text-decoration: none;
+      font-family: var(--link-font);
+      font-size: var(--link-size);
+      font-weight: var(--link-weight);
+      line-height: var(--link-lineheight);
+      letter-spacing: var(--link-spacing);
+      color: var(--palette-accent);
+    
+      background-color: var(--palette-base); /* ie fix */
+      background-image: -webkit-linear-gradient(var(--palette-glaze));
+      background-image: -moz-linear-gradient(var(--palette-glaze));
+      background-image: linear-gradient(var(--palette-glaze));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: var(--palette-base);
+/*     filter: saturate(1.5) brightness(125%); */
+  }
+  a:hover {
+      --palette-base: none;
+      font-family: var(--linkhover-font);
+      font-size: var(--linkhover-size);
+      font-weight: var(--linkhover-weight);
+      line-height: var(--linkhover-lineheight);
+      letter-spacing: var(--linkhover-spacing);
+      color: var(--palette-accent);
+      filter:brightness(70%) saturate(3);
+      background-image: -webkit-linear-gradient(var(--palette-gloss));
+      background-image: -moz-linear-gradient(var(--palette-gloss));
+      background-image: linear-gradient(var(--palette-gloss));
+  }
+a:active, .current-menu-item a {
+      --palette-base: none;
+      font-family: var(--linkactive-font);
+      font-size: var(--linkactive-size);
+      font-weight: var(--linkactive-weight);
+      line-height: var(--linkactive-lineheight);
+      letter-spacing: var(--linkactive-spacing);
+      color: var(--palette-complementary);
+    text-shadow: 0.03em 0px 0.02em var(--palette-shadow);
+  filter: none;
+  }
+h1, h2, h3, h4, h5, h6 {
+      font-family: var(--header-font);
+      font-size: var(--header-size);
+      font-weight: var(--header-weight);
+      line-height: var(--header-lineheight);
+      letter-spacing: var(--header-spacing);
+      margin: 1rem 0;
+      color: var(--palette-accent);
+  text-shadow: 0em 0px 0.02em var(--palette-shadow);
+}
+h1 {
+      font-family: var(--h1-font);
+      font-size: var(--h1-size);
+      font-weight: var(--h1-weight);
+      line-height: var(--h1-lineheight);
+      letter-spacing: var(--h1-spacing);
+}
+h2 {
+      font-family: var(--h2-font);
+      font-size: var(--h2-size);
+      font-weight: var(--h2-weight);
+      line-height: var(--h2-lineheight);
+      letter-spacing: var(--h2-spacing);
+}
+h3 {
+      font-family: var(--h3-font);
+      font-size: var(--h3-size);
+      font-weight: var(--h3-weight);
+      line-height: var(--h3-lineheight);
+      letter-spacing: var(--h3-spacing);
+}
+h4 {
+      font-family: var(--h4-font);
+      font-size: var(--h4-size);
+      font-weight: var(--h4-weight);
+      line-height: var(--h4-lineheight);
+      letter-spacing: var(--h4-spacing);
+}
+h5 {
+      font-family: var(--h5-font);
+      font-size: var(--h5-size);
+      font-weight: var(--h5-weight);
+      line-height: var(--h5-lineheight);
+      letter-spacing: var(--h5-spacing);
+}
+h6 {
+      font-family: var(--h6-font);
+      font-size: var(--h6-size);
+      font-weight: var(--h6-weight);
+      line-height: var(--h6-lineheight);
+      letter-spacing: var(--h6-spacing);
+}
+
+body > main > article > header h1 {
+  font-family: var(--hero-font);
+      font-size: var(--hero-size);
+      font-weight: var(--hero-weight);
+      line-height: var(--hero-lineheight);
+      letter-spacing: var(--hero-spacing);
+  
+  --palette-ground: var(--palette-action);
+    color: var(--pallete-complementary);
+    background-image: none;
+    -webkit-text-fill-color: var(--pallete-complementary);
+    text-shadow: 0 0 3px var(--palette-ground);
+
+}
 
