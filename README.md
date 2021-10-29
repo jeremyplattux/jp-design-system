@@ -19,7 +19,7 @@ By defining everything as css varibles, we can easily change our color selection
 
 By using SVG filters, we can glaze images and enhance/reduce the color in our images to fit our color palette without making the image 'flatter' or 'washed' out like when we use gradient washes.  The SVG is embeded right under the body initialization in the HTML file and the filter id within is referenced within css as a url filter.
 
-Example:
+Example (in HTML):
 
 `<svg id="svgfilters" aria-hidden="true" style="position: absolute; width: 0; height: 0; overflow: hidden;" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
     <defs>
@@ -38,3 +38,7 @@ Example:
 			</filter>
 		</defs>
    </svg>`
+   
+   (in CSS)
+   
+   `filter: url('#underglaze');`
