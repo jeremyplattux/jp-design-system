@@ -11,9 +11,13 @@ In the following palette, I set an inital primary hue then calculate additional 
 
 From there, I change the saturation and lightness to create different color profiles for each palette choice. These include one where the saturation is changed to be a 'highlight/accent' color, and two others defined by how light or dark in the lightness level while keeping the hue and saturation the same as the original palette.
 
-Gradients washes are 2 to 3 color combinations of the 'highlight' palette.
+
 
 By defining everything as css varibles, we can easily change our color selections later or define it dependant by device/etc.
+
+### Gradients for Washes and Accents
+
+Gradients are primarily used as image washes and element accents and are 2 to 3 analogous color combinations of the 'highlight' palette.
 
 ### SVG Filter to Glaze Images
 
