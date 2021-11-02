@@ -23,6 +23,8 @@ then reference it later
 
 now I can just change the variable and it will effect everywhere I use it.  I can also specifiy instances where it should be different and have it populate through.
 
+(css)
+
 `@media screen and (min-width: 37.5em) {
 	--global-variable: value2;
 }`
@@ -34,7 +36,8 @@ color-palette.css
 By defining colors through hue, saturation and lightness level, we can easily define colors in relation to each other. In addition to this benefit, we can specify the lightness level in order to create better contrast for color blindness.
 
 In the following palette, I set an inital primary hue then calculate additional hues by moving defined distances around the 360 color wheel while keeping the saturation and lightness the same.
-Color Palette Hues
+
+Color Palette Hues (css)
 
 <code>
 --primary-hue: 330;
@@ -45,9 +48,8 @@ Color Palette Hues
 
 From there, I change the saturation and lightness to create different color profiles for each palette choice. These include one where the saturation is changed to be a 'highlight/accent' color, and two others defined by how light or dark in the lightness level while keeping the hue and saturation the same as the original palette.
 
-(css)
 Color Palette Saturation,  
-Color Palette Lightness Levels
+Color Palette Lightness Levels (css)
 
 <code>
   --sat-default: 75%;
@@ -60,7 +62,7 @@ Color Palette Lightness Levels
   --light-dark: 20%;
   --light-sat: 60%;</code>
  
-Color Palette HSL (Hue Saturation Lightness)
+Color Palette HSL (Hue Saturation Lightness) (css)
   
 `
 --color-primary: hsl(var(--primary-hue), var(--sat-default), var(--light-default));
@@ -68,7 +70,7 @@ Color Palette HSL (Hue Saturation Lightness)
 
 By defining everything as css varibles, we can easily change our color selections later, define it dependant by device/etc, or dark/light mode.
 
-Default Layout Color Palette
+Default Layout Color Palette (css)
 
 `
    --palette-ground: var(--color-primary); /*  60% of layout color */
