@@ -55,10 +55,17 @@ From there, I change the saturation and lightness to create different color prof
   --light-default: 80%;
   --light-light: 99%;
   --light-dark: 20%;
-  --light-sat: 60%;`
-
+  --light-sat: 60%;
+  
+  /*  Color Palette HSL (Hue Saturation Lightness)  */
+  --color-primary: hsl(var(--primary-hue), var(--sat-default), var(--light-default));
+  `
 
 By defining everything as css varibles, we can easily change our color selections later, define it dependant by device/etc, or dark/light mode.
+
+`/*  Default Layout Color Palette  */
+   --palette-ground: var(--color-primary); /*  60% of layout color */
+`
 
 ### Gradients for Washes and Accents
 
