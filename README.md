@@ -57,7 +57,7 @@ From there, I change the saturation and lightness to create different color prof
   --light-light: 99%;
   --light-dark: 20%;
   --light-sat: 60%;`
-  /*  Color Palette HSL (Hue Saturation Lightness)  *
+  /*  Color Palette HSL (Hue Saturation Lightness)  */
   
 `
 --color-primary: hsl(var(--primary-hue), var(--sat-default), var(--light-default));
