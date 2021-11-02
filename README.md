@@ -37,11 +37,11 @@ In the following palette, I set an inital primary hue then calculate additional 
 Color Palette Hues
 
 `
-  --primary-hue: 330;
+--primary-hue: 330;
   --secondary-hue: calc( var(--primary-hue) + 50 );
   --primary-comp-hue: calc( var(--primary-hue) + 200 );
   --secondary-comp-hue: calc( var(--primary-hue) + 260 );
-`
+  `
 
 From there, I change the saturation and lightness to create different color profiles for each palette choice. These include one where the saturation is changed to be a 'highlight/accent' color, and two others defined by how light or dark in the lightness level while keeping the hue and saturation the same as the original palette.
 
