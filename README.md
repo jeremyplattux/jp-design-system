@@ -34,8 +34,8 @@ color-palette.css
 By defining colors through hue, saturation and lightness level, we can easily define colors in relation to each other. In addition to this benefit, we can specify the lightness level in order to create better contrast for color blindness.
 
 In the following palette, I set an inital primary hue then calculate additional hues by moving defined distances around the 360 color wheel while keeping the saturation and lightness the same.
-
-`/*  Color Palette Hues  */
+/*  Color Palette Hues  */
+`
   --primary-hue: 330;
   --secondary-hue: calc( var(--primary-hue) + 50 );
   --primary-comp-hue: calc( var(--primary-hue) + 200 );
@@ -45,25 +45,27 @@ In the following palette, I set an inital primary hue then calculate additional 
 From there, I change the saturation and lightness to create different color profiles for each palette choice. These include one where the saturation is changed to be a 'highlight/accent' color, and two others defined by how light or dark in the lightness level while keeping the hue and saturation the same as the original palette.
 
 (css)
-
-`  /*  Color Palette Saturation  */
+/*  Color Palette Saturation  */
+/*  Color Palette Lightness Levels  */
+` 
   --sat-default: 75%;
   --sat-light: 50%;
   --sat-dark: 50%;
   --sat-sat: 75%;
-   /*  Color Palette Lightness Levels  */
+   
   --light-default: 80%;
   --light-light: 99%;
   --light-dark: 20%;
   --light-sat: 60%;
-  
+`
   /*  Color Palette HSL (Hue Saturation Lightness)  */
-  --color-primary: hsl(var(--primary-hue), var(--sat-default), var(--light-default));
-  `
+`--color-primary: hsl(var(--primary-hue), var(--sat-default), var(--light-default)); `
 
 By defining everything as css varibles, we can easily change our color selections later, define it dependant by device/etc, or dark/light mode.
 
-`/*  Default Layout Color Palette  */
+/*  Default Layout Color Palette  */
+
+`
    --palette-ground: var(--color-primary); /*  60% of layout color */
 `
 
@@ -71,9 +73,9 @@ By defining everything as css varibles, we can easily change our color selection
 
 Gradients are primarily used as image washes and element accents and are 2 to 3 analogous color combinations of the 'highlight' palette.
 
-Example (css)
+Example (css) /*  Color Palette Gradient Example   */
 
-`/*  Color Palette Gradient Example   */
+`
 :root{
   --gradient-primary: 0.25turn, var(--color-secondary), var(--color-primary), var(--color-secondary-comp);
   --underwash: var(--gradient-primary);
