@@ -47,7 +47,8 @@ From there, I change the saturation and lightness to create different color prof
 (css)
 /*  Color Palette Saturation  */
 /*  Color Palette Lightness Levels  */
-` --sat-default: 75%;
+` 
+--sat-default: 75%;
   --sat-light: 50%;
   --sat-dark: 50%;
   --sat-sat: 75%;
@@ -58,7 +59,8 @@ From there, I change the saturation and lightness to create different color prof
   --light-sat: 60%;`
   /*  Color Palette HSL (Hue Saturation Lightness)  *
   
-`--color-primary: hsl(var(--primary-hue), var(--sat-default), var(--light-default));
+`
+--color-primary: hsl(var(--primary-hue), var(--sat-default), var(--light-default));
 `
 
 By defining everything as css varibles, we can easily change our color selections later, define it dependant by device/etc, or dark/light mode.
