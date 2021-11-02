@@ -1,6 +1,31 @@
 # Personal Design System
 author: Jeremy Platt
 
+## CSS Variables
+color-palette.css, typography.css, layout.css
+
+Design systems establish design patterns that can be reused.  I employ css variables to reuse and implement system wide design changes on my personal website.
+I establish the inital global variable:
+
+(css)
+`:root{
+	--global-variable: value;
+}`
+
+then reference it later
+
+(css)
+
+`section.instance {
+	width: var(--global-variable);
+}`
+
+now I can just change the variable and it will effect everywhere I use it.  I can also specifiy instances where it should be different and have it populate through.
+
+`@media screen and (min-width: 37.5em) {
+	--global-variable: value2;
+}`
+
 ## Color
 ### HSL Responsive Color Palette
 color-palette.css
