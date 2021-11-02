@@ -35,6 +35,7 @@ By defining colors through hue, saturation and lightness level, we can easily de
 
 In the following palette, I set an inital primary hue then calculate additional hues by moving defined distances around the 360 color wheel while keeping the saturation and lightness the same.
 /*  Color Palette Hues  */
+
 `
   --primary-hue: 330;
   --secondary-hue: calc( var(--primary-hue) + 50 );
@@ -47,6 +48,7 @@ From there, I change the saturation and lightness to create different color prof
 (css)
 /*  Color Palette Saturation  */
 /*  Color Palette Lightness Levels  */
+
 ` 
 --sat-default: 75%;
   --sat-light: 50%;
@@ -57,7 +59,8 @@ From there, I change the saturation and lightness to create different color prof
   --light-light: 99%;
   --light-dark: 20%;
   --light-sat: 60%;`
-  /*  Color Palette HSL (Hue Saturation Lightness)  */
+ 
+ /*  Color Palette HSL (Hue Saturation Lightness)  */
   
 `
 --color-primary: hsl(var(--primary-hue), var(--sat-default), var(--light-default));
