@@ -46,10 +46,10 @@ Color Palette Hues
 From there, I change the saturation and lightness to create different color profiles for each palette choice. These include one where the saturation is changed to be a 'highlight/accent' color, and two others defined by how light or dark in the lightness level while keeping the hue and saturation the same as the original palette.
 
 (css)
-Color Palette Saturation 
+Color Palette Saturation,  
 Color Palette Lightness Levels
 
-` 
+<code>
   --sat-default: 75%;
   --sat-light: 50%;
   --sat-dark: 50%;
@@ -58,7 +58,7 @@ Color Palette Lightness Levels
   --light-default: 80%;
   --light-light: 99%;
   --light-dark: 20%;
-  --light-sat: 60%;`
+  --light-sat: 60%;</code>
  
 Color Palette HSL (Hue Saturation Lightness)
   
