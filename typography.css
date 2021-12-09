@@ -32,50 +32,50 @@
 		--h2-size: 1.67em;
 		--h2-weight: var(--header-weight);
 		--h2-lineheight: var(--header-lineheight);
-    		--h2-spacing: 0.05em;
+    --h2-spacing: 0.05em;
 	
 		--h3-font: var(--header-font);
 		--h3-size: 1.5em;
 		--h3-weight: 300;
 		--h3-lineheight: var(--header-lineheight);
-    		--h3-spacing: var(--header-spacing);
+    --h3-spacing: var(--header-spacing);
 	
 		--h4-font: var(--header-font);
 		--h4-size: 1.3em;
 		--h4-weight: var(--header-weight);
 		--h4-lineheight: var(--header-lineheight);
-    		--h4-spacing: 0.05em;
+    --h4-spacing: 0.05em;
 	
 		--h5-font: var(--header-font);
 		--h5-size: 1.3em;
 		--h5-weight: 300;
 		--h5-lineheight: var(--header-lineheight);
-    		--h5-spacing: var(--header-spacing);
+    --h5-spacing: var(--header-spacing);
 	
 		--h6-font: var(--header-font);
 		--h6-size: var(--header-size);
 		--h6-weight: var(--header-weight);
 		--h6-lineheight: var(--header-lineheight);
-    		--h6-spacing: 0.05em;
+    --h6-spacing: 0.05em;
 	
 	/* default layout text characteristics */
-		--logo-font: var(--header-font);
-		--logo-size: 2em;
-		--logo-weight: 900;
-		--logo-lineheight: var(--default);
-    		--logo-spacing: 0.05em;
+		--logo-font: var(--h2-font);
+		--logo-size: var(--h2-size);
+		--logo-weight: var(--h2-weight);
+		--logo-lineheight: 1.5em;
+    --logo-spacing: var(--h2-spacing);
 
 		--title-font: var(--h2-font);
 		--title-size: var(--h1-size);
-    		--title-weight: var(--h2-weight);
+    --title-weight: var(--h2-weight);
 		--title-lineheight: var(--h2-lineheight);
-    		--title-spacing: var(--h2-spacing);
+    --title-spacing: var(--h2-spacing);
 
 		--hero-font: var(--header-font);
 		--hero-size: var(--h2-size);
-    		--hero-weight: 900;
+    --hero-weight: 900;
 		--hero-lineheight: var(--header-lineheight);
-   		--hero-spacing: 0.05em;
+    --hero-spacing: 0.05em;
 	
 		--footer-font: var(--text-font);
 		--footer-size: calc(14px + 0.1vw);
@@ -83,7 +83,7 @@
 
 		--social-font: var(--default);
 		--social-size: var(--default);
-    		--social-weight: var(--default);
+    --social-weight: var(--default);
 		--social-lineheight: var(--default);
 	
 	/* default characteristics */
@@ -101,20 +101,20 @@
 		--linkactive-weight: var(--link-weight);	
 	
 		--italic-font: var(--header-font); 
-    		--italic-style: normal; /* avoid underline & slant to keep readibility */
+    --italic-style: normal; /* avoid underline & slant to keep readibility */
 		--italic-size: var(--default);
 		--italic-weight: calc(var(--text-weight) - 100);
-    		--italic-spacing: 0.05em;
+    --italic-spacing: 0.05em;
 	
 		--underline-font: var(--default); 
-    		--underline-style: normal; /* avoid underline & slant to keep readibility */
+    --underline-style: normal; /* avoid underline & slant to keep readibility */
 		--underline-size: var(--default);
 		--underline-weight: var(--default);
 	
 		--bold-font: var(--default);
 		--bold-size: var(--default);
 		--bold-weight: 900;
-   		--bold-spacing: 0.06em;
+   	--bold-spacing: 0.06em;
 	
 		--big-font: var(--default); /* avoid all uppercase to keep readibility */
 		--big-size: 1.25em;
@@ -140,7 +140,7 @@
 		--input-size: var(--default);
 		--input-weight: 900;
 		--input-lineheight: var(--default);
-    		--input-spacing: 0.05em;
+    --input-spacing: 0.05em;
 }
 
 /* Typography Default DESKTOP / Wide Display Varible Changes */
@@ -149,6 +149,105 @@
     :root{ 
 	    --text-size: calc(14px + 1vw); /* default DESKTOP text size is equal to 0.5% of the width of display window + 14px */  }
   }
+
+
+
+/* Typography Ranges */
+#typography-ranges {
+  display: relative;
+  font-family: var(--text-font);
+  font-size: var(--text-size);
+  font-weight: var(--text-weight);
+  line-height: var(--text-lineheight);
+  letter-spacing: var(--text-spacing);
+  background: var(--palette-ground);
+  color: var(--palette-complementary);
+  padding-top:5em;
+}
+#typography-ranges #darkcheck{
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    appearance: none;
+    -webkit-appearance : none;
+    -moz-appearance : none;
+    -o-appearance : none;
+    width: 40px;
+    height: 22px;
+    background: var(--palette-complementary);
+    border-radius: 11px;
+    cursor: pointer;
+    outline: none;
+    z-index: 5;
+}
+#darklabel {
+  position: fixed;
+  margin: 0;
+  padding: 0;
+  margin-top: -5.5em;
+  text-align: right;
+  padding-top: 3em;
+  background: var(--palette-ground);
+  z-index: 1;
+  padding-right: 1.5em;
+  width: calc(100% - 1.5em);
+}
+/* styling the circle inside the checkbox input */
+#typography-ranges #darkcheck::before{
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background-color:white;
+    border-radius: 10px;
+    top: 1px;
+    left: 1px;
+    cursor: pointer;
+    transition: .3s linear;
+    z-index: 5;
+}
+/* Switching to the dark when the checkbox is toggled */
+#darkcheck:checked + label + div + header + main + aside + footer, #darkcheck:checked + label + div + header, #darkcheck:checked + label + div + header + main, #darkcheck:checked + label + div, #darkcheck:checked + label {
+  --palette-ground: var(--color-secondary-comp-dark);
+  --palette-complementary: var(--color-primary-light);
+  --palette-accent: var(--color-primary-comp);
+  --palette-shadow: var(--color-primary-light);
+  color: var(--palette-complementary);
+}
+#darkcheck + label + div {
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: block;
+  width: 100vw;
+  height: 100vh;
+  z-index: -5;
+}
+#darkcheck:checked + label + div, #darkcheck:checked + label {
+   --palette-ground: var(--color-secondary-comp-dark);
+  background: var(--palette-ground);
+}
+/* moving the checkbox circle when it's toggled by the user */
+#typography-ranges #darkcheck:checked::before{
+    left: 20px;
+    background: var(--palette-complementary);
+}
+/* changing the color of the checkbox when it's toggled */
+#typography-ranges #darkcheck:checked{
+    --palette-ground: var(--color-primary-light);
+  background: var(--palette-ground);
+}
+
+:is(#typography-ranges) header, main, footer {
+  margin:0;
+  padding 0;
+}
+#palette-ranges li {
+  text-align: center;
+}
+#palette-ranges li:before{ 
+  content:'';
+}
 
 /* Default Typography */
   abbr[title] {
@@ -214,7 +313,7 @@
       -webkit-text-fill-color: var(--palette-base);
 /*     filter: saturate(1.5) brightness(125%); */
   }
-  a:hover {
+  a:hover, a:focus {
       --palette-base: none;
       font-family: var(--linkhover-font);
       font-size: var(--linkhover-size);
@@ -299,7 +398,7 @@ body > main > article > header h1 {
       letter-spacing: var(--hero-spacing);
   
   --palette-ground: var(--palette-action);
-    color: var(--pallete-complementary);
+  color: var(--pallete-complementary);
     background-image: none;
     -webkit-text-fill-color: var(--pallete-complementary);
     text-shadow: 0 0 3px var(--palette-ground);
