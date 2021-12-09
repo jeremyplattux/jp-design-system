@@ -84,7 +84,7 @@ input[type="text"], input[type="email"], input[type="url"], input[type="password
     background-size: cover;
     background-repeat: no-repeat;
   }
-button:hover, input[type="button"]:hover, input[type="reset"]:hover, input[type="submit"]:hover {
+button:hover, input[type="button"]:hover, input[type="reset"]:hover, input[type="submit"]:hover, button:focus, input[type="button"]:focus, input[type="reset"]:focus, input[type="submit"]:focus {
     border-color: var(--palette-accent);
     color: var(--palette-accent);
     background-color: var(--palette-complementary);
@@ -190,7 +190,7 @@ a.screen-reader-text:before {
     top: 0em;
     width: 10em;
     z-index: -1;
-    content: ' ';
+    content: '';
     --palette-ground: var(--palette-action);
     background-color: var(--palette-ground);
 }
@@ -208,6 +208,7 @@ a.screen-reader-text:before {
     height: 100%;
     overflow: hidden;
 }
+
 /* Mobile Header & Menu  */
 body > header {
       position: fixed;
@@ -220,9 +221,9 @@ body > header {
       top: 0;
   }
 .site-title {
-    font-size: var(--title-size);
-    font-weight: var(--title-weight);
-    line-height: var(--title-lineheight);
+    font-size: var(--logo-size);
+    font-weight: var(--logo-weight);
+    line-height: var(--logo-lineheight);
   text-shadow: 0.03em 0.03px 0.02em var(--palette-shadow);
 }
 .site-title a { 
@@ -231,7 +232,7 @@ body > header {
   --palette-base: none;
   filter: none;
 }
-.site-title:hover {
+.site-title:hover, .site-title:focus {
   --palette-shadow: var(--palette-accent);
 }
 
@@ -260,7 +261,7 @@ body > header {
     float: none;
     order: 1;
     flex-grow: 1;
-    margin-right: -2em;
+    margin-right: -0.5em;
     display: inline-flex;
     padding: 0em;
     height: 100%;
@@ -326,7 +327,7 @@ body > header {
     opacity: 0;
     z-index: 102;
 }
-#main-navigation input:checked ~ .mobile-open
+#main-navigation input:checked ~ .mobile-open, .mobile-open:focus-within
 {
 	transform: none;
 }
@@ -349,7 +350,7 @@ body > header {
   transform: rotate(-45deg) translate(0.15em, -0.15em);
   height: 0.15em;
 }
-#main-navigation input:hover ~ .menu-toggle {
+#main-navigation input:hover ~ .menu-toggle, #main-navigation input:focus ~ .menu-toggle {
 	background-image: -webkit-linear-gradient(var(--palette-gloss));
 	background-image: -moz-linear-gradient(var(--palette-gloss));
 	background-image: linear-gradient(var(--palette-gloss));
@@ -433,7 +434,7 @@ body > header {
     padding: 4.5em 0em !important;
     font-size: 0.4em;
 }
-.profile-contact:hover {
+.profile-contact:hover, .profile-contact:focus {
     font-size: 0.4em;
     color: transparent !important;
     background-color: var(--palette-complementary);
@@ -451,13 +452,12 @@ body > header {
     -webkit-text-fill-color: var(--palette-complementary);
     text-shadow: 0.02em 0.02em 0.02em var(--palette-primary);
 }
-.profile-contact:hover .fas {
+.profile-contact:hover .fas, .profile-contact:focus .fas {
     color: var(--palette-accent);
     -webkit-text-fill-color: var(--palette-accent);
     text-shadow: unset;
 }
-a.profile-contact {
-}
+
 
 .nav-profile a h2 {
     margin: 0;
@@ -472,7 +472,7 @@ a.profile-contact {
     -webkit-background-clip: text;
     -webkit-text-fill-color: var(--palette-complementary);
 }
-.nav-profile a:hover {
+.nav-profile a:hover, .nav-profile a:focus {
   filter: none;
   --palette-shadow: var(--palette-accent);
 }
@@ -524,7 +524,7 @@ menu.social-links a svg {
     background-color: var(--palette-ground);
     border-bottom: 0.01em solid var(--palette-complementary);
 }
-#main-navigation menu li:hover {
+#main-navigation menu li:hover, #main-navigation menu li:focus-within {
     background-color: var(--palette-complementary);
 }
 #main-navigation menu li.current-menu-item {
@@ -563,12 +563,14 @@ position: relative;
     webkit-clip-path: polygon(0 6vh, 100% 0, 100% calc(100% - 6vh), 0 100%);
     -moz-clip-path: polygon(0 6vh, 100% 0, 100% calc(100% - 6vh), 0 100%);
     clip-path: polygon(0 6vh, 100% 0, 100% calc(100% - 6vh), 0 100%);
+  
     background-image: -webkit-linear-gradient(var(--palette-glaze));
     background-image: -moz-linear-gradient(var(--palette-glaze));
     background-image: linear-gradient(var(--palette-glaze));
     background-size: cover;
     background-repeat: no-repeat;
 }
+
 main > section:after, main > article > section:after {
     display: block;
     top: 0.2rem;
@@ -640,7 +642,7 @@ section figure, section[role="form"] {
 main > article > section > section > section {
   display: inline-block;
 }
-:is(main > article > section > section > section) a:hover, a:hover img {
+:is(main > article > section > section > section) a:hover, a:hover img, a:focus, a:focus img {
   filter: none;
 }
 main > article > section > section > section img {
@@ -733,8 +735,12 @@ section[role="form"] {
       -moz-clip-path: polygon(3vw 3vh, 100% 0, 100% calc(100% - 3vh), 0 100%);
       clip-path: polygon(3vw 3vh, 100% 0, 100% calc(100% - 3vh), 0 100%);
   }
+
 @media screen and (min-width: 37.5em) {
 /*  Desktop Header & Menu  */
+  #droplabel, #dropaccess {
+    --logo-size: var(--h4-size);
+  }
   body > header {
     justify-content: space-between;
   }
@@ -760,6 +766,7 @@ section[role="form"] {
   }
   #logo .site-title {
     display: inline-flex;
+    --logo-lineheight: var(--header-lineheight);
     --title-size: var(--h2-size);
   }
   .mobile-open {
@@ -793,6 +800,7 @@ section[role="form"] {
   }
   #main-navigation menu {
     display: inline-flex;
+    margin-right: 2rem;
     background-color: transparent;
   }
   #main-navigation menu li.menu-item-home {
@@ -817,6 +825,7 @@ section[role="form"] {
   menu :is(.fas, .far, .fab) {
     display: none;
   }
+
    main > article > section > figure {
       top: -0.8em;
       left: 50%;
@@ -879,5 +888,163 @@ section[role="form"] {
 	main > article > section > section > section:first-child:nth-last-child(3n+2) ~ main > article > section > section > section:nth-last-child(2) {
 		grid-column: span 3;
 	}
+
+}
+@media screen and (max-width: 20em) {
+    #logo .site-title {
+    --logo-size: var(--h6-size);
+    --logo-lineheight: var(--title-size);
+  }
+}
+/* Switching to the dark when the checkbox is toggled */
+
+
+
+#dropaccess, #droplabel{
+  --palette-shadow: var(--color-primary-light);
+  --palette-accent: var(--color-secondary-comp-sat);
+  --palette-complementary: var(--color-secondary-comp-sat);
+  color: var(--palette-complementary);
+  font-size: var(--logo-size);
+  position: fixed;
+    top: 0.5rem;
+    right: 0rem;
+    appearance: none;
+    -webkit-appearance : none;
+    -moz-appearance : none;
+    -o-appearance : none;
+    width: 2rem;
+    height: 2rem; 
+    cursor: pointer;
+    outline: none;
+    z-index: 101;
+    text-shadow: 0.03em 0.03px 0.02em var(--palette-shadow);
+}
+#dropaccess:hover, #dropaccess:checked, #dropaccess:focus{
+  width: calc(100% - 1rem);
+  height: 2em;
+  clip-path: polygon(0 1em, calc(100% - 1em) 1em, calc(100% - 1em) 0, 100% 0, 100% 100%, 0% 100%);
+}
+
+*:focus, #dropaccess:focus + #droplabel, #darkcheck:focus + #darklabel, #toggle:focus + label,  .profile-contact:focus .fas {
+    outline: 0.1rem dotted var(--palette-accent);
+}
+
+#dropaccess {
+  z-index: 105;
+}
+#droplabel span {
+  display: none;
+}
+#droplabel:hover, #dropaccess:hover + #droplabel, #droplabel:focus, #dropaccess:focus + #droplabel {
+  color: var(--palette-accent);
+}
+#droplabel:hover span, #dropaccess:hover + #droplabel span,
+#droplabel:focus span, #dropaccess:focus + #droplabel span, #dropaccess:checked + #droplabel span {
+  --palette-ground: var(--color-primary-comp);
+  display: inline-block;
+  position: fixed;
+  top: 2.2rem;
+  right: 0rem;
+  padding-right: 1rem;
+  font-size: var(--small-size);
+  font-weight: var(--bold-weight);
+  background: var(--palette-ground);
+  width: 100%;
+  text-align: right;
+}
+
+#dropaccess:checked + label + input#darkcheck, input#darkcheck:focus {
+  top: 4rem;
+}
+#dropaccess:checked + label + input#darkcheck + #darklabel, input#darkcheck:focus + #darklabel {
+  top: 3.7rem; 
+}
+
+#darkcheck{
+    position: fixed;
+    top: -3.5rem;
+    right: 1rem;
+    appearance: none;
+    -webkit-appearance : none;
+    -moz-appearance : none;
+    -o-appearance : none;
+    width: 2rem;
+    height: 1rem;
+    background: white;
+    border-radius: 1rem;
+    cursor: pointer;
+    outline: none;
+    z-index: 5;
+    transition: .3s linear;
+  border: 1px solid;
+}
+#darklabel {
+  --palette-ground: var(--color-primary-comp);
+  --palette-complementary: var(--color-primary-sat);
+  position: fixed;
+  margin: 0;
+  padding: 0;
+  top: -3.5rem;
+  right: 0;
+  padding-top: 0.1rem;
+  padding-right: 3.5rem;
+  background: var(--palette-ground);
+  color: var(--palette-complementary);
+  font-size: var(--small-size);
+  text-align: right;
+  z-index: 1;
+  transition: .3s linear;
+}
+#darkcheck::before{
+    content: '';
+    position: absolute;
+    width: 0.8rem;
+    height: 0.8rem;
+    background-color:black;
+    border-radius: 0.4rem;
+    top: 0.05rem;
+    left: 0.05rem;
+    cursor: pointer;
+    transition: .3s linear;
+    z-index: 5;
+}
+#darkcheck:checked::before{
+    left: 1rem;
+}
+#darkcheck:checked + label + a + a + div + header + main section{
+  --palette-ground: var(--color-secondary-comp-dark);
+  --palette-complementary: var(--color-primary-light);
+  --palette-accent: var(--color-primary-comp);
+  --palette-shadow: var(--color-primary-light);
+  color: var(--palette-complementary);
+}
+
+@media screen and (prefers-reduced-motion: reduce) {
+ .fa-spin
+  {
+  -webkit-animation: none;
+  -moz-animation: none;
+  -o-animation: none;
+  animation: none;
+  }
+}
+
+@media screen and (prefers-reduced-motion: no-preference) { 
+  .fa-spin
+  {
+  -webkit-animation:fa-spin 2s 1 linear;
+  -moz-animation:fa-spin 2s 1 linear;
+  -o-animation:fa-spin 2s 1 linear;
+  animation:fa-spin 2s 1 linear;
+  }
+  .fa-spin:hover, label:hover .fa-spin, input:hover + label .fa-spin
+  {
+  -webkit-animation:fa-spin 2s infinite linear;
+  -moz-animation:fa-spin 2s infinite linear;
+  -o-animation:fa-spin 2s infinite linear;
+  animation:fa-spin 2s infinite linear;
+  }
+}
 
 }
